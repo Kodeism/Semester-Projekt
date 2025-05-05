@@ -102,8 +102,8 @@
         //Ejendomsmægleren der administreret boligen
         public int SælgerID { get; set; }
         //sælgeren der vil sælge boligen
-        public bool Status { get; set; }
-        //false = ikke solgt. true = solgt
+        public string Status { get; set; }
+        //Solgt, eller Usolgt
         public Bolig(int pris, string adresse, string type, int boligAreal, int værelser, int byggeDato, int grundStørrelse, Ejendomsmægler ejendomsmægler, Sælger sælger)
         {
             Pris = pris;
@@ -116,7 +116,7 @@
             EjendomsmæglerID = ejendomsmægler.EjendomsmæglerID;
             SælgerID = sælger.SælgerID;
             EnergiMærke = "";
-            Status = false;
+            Status = "Usolgt";
         }
     }
 
